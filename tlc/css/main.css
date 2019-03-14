@@ -1,0 +1,350 @@
+body{
+    background-color:#fff;
+}
+.content-container{
+	padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.banner-block{
+	position:relative;
+}
+.unit-title{
+	position:absolute;
+	width:100%;
+	top:50%;
+	margin-top:-25px;
+	color:#fff;
+}
+.unit-title h2{
+	font-size:50px;
+	margin:0;
+}
+.bread_crumb{
+	width:100%;
+	height:40px;
+	position:absolute;
+	bottom:0;
+	color:#fff;
+	background-color:rgba(0,153,168,0.7);
+	font-size: 14px;
+	text-align:right;
+}
+.bread_crumb span{
+	line-height: 40px;
+}
+.bread_crumb a{
+	color:#fff;
+}
+.bread-container span + span:before{
+	content: '/';
+	padding: 0 6px 0 4px;
+}
+.page-title{
+	margin:65px 0 50px;
+}
+.lv3_title{
+	border-bottom:1px solid #646665;
+	margin-bottom:40px;
+}
+.lv3_title h3{
+	color:#646665;
+	font-weight:bold;
+	margin:0 0 14px;
+}
+.default_select {
+    float: left;
+    position: relative;
+    margin-right:22px;
+}
+.default_select select {
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    padding: 0 45px 0 20px;
+    background-color: #fff;
+    color:#263238;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.default_select.sm select{
+	min-width: 240px;
+}
+.default_select.mid select{
+	min-width: 515px;
+}
+.default_select.lg select{
+	min-width: 777px;
+}
+.default_select:after{
+	content: "\f107";
+	font-family: FontAwesome;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 28px;
+	pointer-events: none;
+	color:#263238;
+}
+.default_select select::-ms-expand{ display:none; }
+.menu_list{
+	margin-bottom:70px;
+}
+.menu_list ul{
+	list-style:none;
+}
+.menu_list li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-right: 12px;
+    margin-bottom: 7px;
+}
+.menu_list a{
+	color:#fff;
+}
+.menu_list a {
+	width: 330px;
+    display: block;
+    background-color: #646665;
+    color: #FFF;
+    padding: 11px 15px;
+    font-size:20px;
+}
+.menu_list a:hover,
+.menu_list li.active a {
+    background-color: #0099a8;
+    text-decoration: none;
+}
+.menu_list_toggle {
+    display: none;
+}
+#menu_title{
+	font-size:20px;
+	margin:0;
+}
+/*newsletter*/
+.newsletter-info{
+	max-width:540px;
+	margin-bottom:55px;
+}
+.newsletter-block{
+	margin-bottom:100px;
+}
+.newsletter-block > div{
+	width:50%;
+	float:left;
+}
+.newsletter-newsroom{
+	max-width:365px;
+	padding-right:60px;
+	border-right:1px solid #bdbdbd;
+}
+.newsletter-investors{
+	padding-left:100px;
+	height:334px;
+}
+.newsletter-newsroom-title,
+.newsletter-investors-title{
+	font-weight:bold;
+	margin-bottom:12px;
+	font-size: 16px;
+    line-height: 24px;
+}
+.newsletter-newsroom-title{
+	color:#0099a8;
+}
+.newsletter-investors-title{
+	color:#ff6b00;
+}
+.newsletter-box{
+	height:188px;
+}
+.newsletter-input{
+	width:100%;
+	max-width:300px;
+	height:40px;
+	background-color:#f5f5f5;
+	border:2px solid #c9c9c9;
+	text-align: center;
+	padding:0 15px;
+	outline:none;
+	margin-bottom:20px;
+}
+.newsletter-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color:#9e9e9e;
+}
+.newsletter-input::-moz-placeholder { /* Firefox 19+ */
+	color:#9e9e9e;
+}
+.newsletter-input:-ms-input-placeholder { /* IE 10+ */
+	color:#9e9e9e;
+}
+.newsletter-input:-moz-placeholder { /* Firefox 18- */
+	color:#9e9e9e;
+}
+.newsletter-btn{
+	min-width:120px;
+}
+.newsletter-btn.orange{
+	background-color:#ff6b00;
+}
+.newsletter-label{
+	width:50%;
+	margin-bottom:20px;
+	font-weight:normal;
+	display:block;
+	float:left;
+	cursor:pointer;
+}
+.newsletter-label input{
+	margin-right:9px;
+}
+.newsletter-investors iframe{
+	width:100%;
+	height:100%;
+}
+.two-col-html{
+	padding-bottom: 60px;
+}
+.two-col-html > div{
+	float:left;
+	width:50%;
+}
+.two-col-html .html_edit.info-left{
+	padding-right:15px;
+}
+.two-col-html .html_edit.info-right{
+	padding-left:15px;
+}
+.responsibility_html {
+    margin-bottom: 60px;
+}
+@media (min-width: 1024px){
+	.menu_list ul {
+		display: block !important;
+	}
+}
+@media (max-width:767px){
+	.banner-block{
+		height: 200px;
+    	overflow: hidden;
+	}
+	.banner-block img{
+		max-width: none;
+    	height: 100%;
+    	left: 50%;
+    	position: absolute;
+    	transform: translateX(-50%);
+	}
+	.unit-title h2{
+		font-size:45px;
+	}
+	.page-title{
+		margin:25px 0 35px;
+	}
+	.lv3_title{
+		margin-bottom:20px;
+	}
+	.lv3_title h3{
+		margin:0 0 25px;
+	}
+	.default_select{
+		float:none;
+		margin:0 0 30px;
+	}
+	.default_select.sm select,
+	.default_select.mid select,
+	.default_select.lg select{
+		width:100%;
+		min-width:0;
+	}
+	.menu_list {
+	    position: relative;
+	    margin-bottom:35px;
+	}
+	.menu_list_toggle {
+	    min-height: 50px;
+	    display: block;
+	    padding: 12px 50px 12px 32px;
+	    color: #FFF;
+	    background-color: #434343;
+	    cursor: pointer;
+	}
+	.menu_list ul {
+	    width: 100%;
+	    position: absolute;
+	    display: none;
+	    z-index: 6;
+	}
+	.menu_list_toggle.open + ul {
+	    display: block;
+	}
+	.menu_list li {
+	    width: 100%;
+	    margin: 0;
+	    text-align: left;
+	}
+	.menu_list a{
+		width:100%;
+	}
+	.menu_list_toggle h5:after {
+	    content: '\f107';
+	    font-family: 'FontAwesome';
+	    position: absolute;
+	    top: 13px;
+	    right: 30px;
+	}
+	.menu_list_toggle.open h5:after {
+	    -moz-transform: rotate(180deg);
+	    -webkit-transform: rotate(180deg);
+	    -o-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	    transform: rotate(180deg);
+	    top: 14px;
+	}
+	/*newsletter*/
+	.newsletter-block{
+		margin-bottom:50px;
+	}
+	.newsletter-info{
+		margin-bottom:30px;
+	}
+	.newsletter-block > div {
+	    width: 100%;
+	}
+	.newsletter-newsroom{
+		max-width:100%;
+		border:none;
+	}
+	.newsletter-investors{
+		padding:0;
+		height:405px;
+	}
+	.newsletter-box{
+		height:auto;
+		margin-bottom:20px;
+	}
+	.newsletter-btn{
+		margin-bottom:35px;
+	}
+	.two-col-html > div{
+		width:100%;
+	}
+	.two-col-html .html_edit.info-right{
+		padding-top:30px;
+		padding-left:0;
+	}
+	.two-col-html .html_edit.info-left {
+	    padding-right: 0;
+	}
+	.responsibility_html {
+	    margin-bottom: 20px;
+	}
+}
