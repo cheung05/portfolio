@@ -1,0 +1,266 @@
+<notion-image>
+	<div class="notion-image" style="background-image: url(%7b%20opts.html);"><!-- data-aos="flip-up" data-aos-delay="150" data-aos-once＝"true">-->
+		<!-- <div class="container-fluid">
+			<div class="row start-xs middle-xs">
+				<div class="lead col-xs-12">About Us</div>
+			</div>
+		</div> -->
+	</div>
+
+	<script>
+		// this.on('mount', function() {
+		// 	var $window = $(window);
+		// 	var $el = $('.notion-image', this.root);
+		// 	var elHeight;
+		// 	var waiting = false;
+		//
+		// 	init();
+		//
+		// 	function init() {
+		// 		setElHeight();
+		// 		$window.on('scroll', handleScroll).on('resize', handleResize);
+		// 	}
+		//
+		// 	function setElHeight() {
+		// 		return elHeight = $el.outerHeight();
+		// 	}
+		//
+		// 	function handleScroll() {
+		// 		if (waiting) return;
+		// 		waiting = true;
+		//
+		// 		var windowScrollTop = $window.scrollTop(); // * 1.3 加速
+		// 		var opacity = 1 - (windowScrollTop / elHeight);
+		//
+		// 		if (opacity < 0) opacity = 0;
+		// 		$el.css('opacity', opacity);
+		// 		showInfo(opacity);
+		//
+		//     setTimeout(function () {
+		//       waiting = false;
+		//     }, 60);
+		// 	}
+		//
+		// 	function handleResize() {
+		// 		setElHeight();
+		// 		handleScroll();
+		// 	}
+		//
+		// 	function showInfo(opacity) {
+		// 		$el.find('.fa').css('transform', 'scale('+ opacity + ')');
+		// 		$('[js-info]').text('opacity: ' + opacity.toFixed(2));
+		// 	}
+		// });
+	</script>
+</notion-image>
+
+<main-content>
+	<main class="{ opts.pageClassName } main">
+		<div class="container-fluid">
+			
+			<div class="col-xs-12 col-sm-12 _mt-0">
+		        <ol class="breadcrumb">
+		            <li><a href="#">Home</a></li>
+		            <li><a href="#">List2</a></li>
+		            <li class="active">List3</li>
+		        </ol>
+			</div>
+
+			<yield />
+
+		</div>
+	</main>
+</main-content>
+
+<bg-slider>
+<div class="slider-wrap">
+	<div class="single-slide" id="slide-1"></div>
+	<div class="single-slide" id="slide-2"></div>
+	<div class="single-slide" id="slide-3"></div>
+	<div class="single-slide" id="slide-4"></div>
+	<div class="single-slide" id="slide-5"></div>
+	
+</div>
+<style>
+.slider-wrap {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: black;
+}
+@media screen and (min-width: 1024px) {
+	.slider-wrap { height: calc(100vh - 100px);}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.slider-wrap { height: 400px;}
+}
+@media screen and (min-width: 585px) and (max-width: 768px){
+	.slider-wrap { height: 350px;}
+}
+@media screen and (min-width: 320px) and (max-width: 585px){
+	.slider-wrap { height: 300px;}
+}
+@media screen and (max-width: 320px){
+	.slider-wrap { height: 200px;}
+}
+
+.single-slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	animation: slider-animation;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	/*background-size: cover;*/
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+#slide-1 {background-image: url(../assets/img/index/slider-1.jpg); }
+#slide-2 {animation-delay: 10s; background-image: url(../assets/img/index/slider-2.jpg);}
+#slide-3 {animation-delay: 20s; background-image: url(../assets/img/index/slider-3.jpg);}
+#slide-4 {animation-delay: 30s; background-image: url(../assets/img/index/slider-4.jpg);}
+#slide-5 {animation-delay: 40s; background-image: url(../assets/img/index/slider-5.html);}
+
+@keyframes slider-animation {
+	0% {
+		opacity: 0;
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	8% {
+		opacity: 1;
+		-webkit-transform: scale(1.02);
+		transform: scale(1.02);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	17% {
+		opacity: 1;
+		-webkit-transform: scale(1.06);
+		transform: scale(1.06);
+	}
+	25% {
+		opacity: 0;
+		-webkit-transform: scale(1.06);
+		transform: scale(1.06);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+</style>
+</bg-slider>
+
+<hero-slider>
+
+	<div class="hero-slider">
+		<div each="{ img in this.items }" class="item" style="background-image: url('%7b%20img%20%7d.html');"></div>
+  </div>
+
+	<style>
+		.hero-slider {
+			width: 100%;
+			height: calc(100vh - 100px);
+			position: relative;
+			overflow: hidden;
+			background: #d4d4d4;
+			background: rgb(238,238,238);
+			background: -moz-linear-gradient(-45deg, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+			background: -webkit-linear-gradient(-45deg, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+			background: linear-gradient(135deg, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 );
+		}
+
+		.hero-slider > .item {
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			height: 100%;
+			opacity: 0;
+			background-size: cover;
+			/*background-size: contain;*/
+			background-position: top center;
+			background-repeat: no-repeat;
+			z-index: 0;
+			will-change: auto;
+			transition: transform 6s, opacity 1000ms;
+			transition-timing-function: ease-in;
+			transform: scale(1.06);
+		}
+
+		.hero-slider > .item.active {
+			opacity: 1;
+			z-index: 1;
+			transform: scale(1);
+		}
+
+		.hero-slider > .item.out {
+			transition: transform 6s, opacity 1050ms;
+		}
+	</style>
+
+	<script>
+		this.on('before-mount', function() {
+			this.items = opts.items.replace(/\s+/g, '').split(','); // 字串逗號分隔轉陣列
+		});
+
+	    this.on('mount', handleSlider);
+
+		function handleSlider() {
+			var $sliderItems = $('.hero-slider', this.root).find('.item');
+			var $firstItem = $sliderItems.filter(':first');
+
+			$sliderItems.addClass('out');
+			$firstItem.toggleClass('out active');
+
+			setInterval(function() {
+				var $currentItem = $sliderItems.filter('.active');
+				var $nextItem = $currentItem.next();
+				var hasNext = $nextItem.length;
+
+				if ( ! hasNext) $nextItem = $firstItem;
+				$currentItem.add($nextItem).toggleClass('active out');
+			}, 6000);
+		}
+	</script>
+</hero-slider>
+
+<tab-set-item>
+	<input id={ opts.id } name="tab-group" class="tab" type="radio" { opts.avtive && 'checked' }>
+	<label for={ opts.id }>{ opts.name }</label>
+</tab-set-item>
+
+<tab-set>
+	<div class="tab-set" data-aos={ opts.dataAos } data-delay={ opts.dataAosDelay }>
+
+    <virtual data-is="tab-set-item" id="tab-1" name="One" avtive="true" />
+
+    <input id="tab-2" name="tab-group" class="tab" type="radio">
+    <label for="tab-2">Two</label>
+
+    <input id="tab-3" name="tab-group" class="tab" type="radio">
+    <label for="tab-3">Three</label>
+
+    <div class="tab__content">
+      <h3>Section One</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis natus vitae velit dolores animi asperiores corrupti voluptas ut dolore. Modi neque libero fuga beatae, alias! Similique, delectus natus dolore laborum.</p>
+    </div>
+
+    <div class="tab__content">
+      <h3>Section Two</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit suscipit dolore minus. Impedit animi error, quis omnis quasi sapiente cupiditate odio molestiae, voluptatum soluta tenetur iste aliquam. Dolorum, repudiandae.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti, unde excepturi veritatis ipsam provident consequuntur tempore. Quibusdam est at voluptatum nisi aliquam, voluptatem deserunt deleniti dolor eaque nulla aut.</p>
+    </div>
+
+    <div class="tab__content">
+      <h3>Section Three</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti, unde excepturi veritatis ipsam provident consequuntur tempore. Quibusdam est at voluptatum nisi aliquam, voluptatem deserunt deleniti dolor eaque nulla aut.</p>
+    </div>
+
+  </div>
+  <!-- /.tab-set -->
+</tab-set>
+
