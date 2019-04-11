@@ -11,6 +11,8 @@
             /* The width is the width of the web page */
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
 </head>
 
 <body>
@@ -24,9 +26,43 @@
             var uluru = { lat: 25.0339687, lng: 121.5622835 };
             // The map, centered at Uluru
             var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 4, center: uluru });
+                document.getElementById('map'), { zoom: 14, center: uluru });
             // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({ position: uluru, map: map });
+            var marker = new google.maps.Marker({ position: uluru, icon:, 
+            map: map });
+             var icon_path = "icon/";
+        var icons={
+            star: {
+            name: 'star',
+        icon:icon_path + "star.png"
+    },
+            moon:{
+            name: 'moon',
+        icon:icon_path + "moon.png"
+    },
+};
+ //--------下面是呼叫一個新marker------
+        for (var i = 0; i <= 3; i++) {
+            lat = latlng.lat - 0.005;
+            lng = latlng.lng - 0.005;
+            latlng = { lat: lat, lng: lng};
+            console.log(lat.toFixed(6));
+            console.log(lng.toFixed(6));
+            console.log(i);
+            
+            if( i == 0){
+                var marker = new google.maps.Marker({
+                    position: latlng, //marker的放置位置
+                    icon:icons.star.icon,
+                    map: map
+                });
+            }else if( i== 1){
+                var marker = new google.maps.Marker({
+                    position: latlng, //marker的放置位置
+                    icon:icons.moon.icon,
+                    map: map
+                });
+            }}
         }
     </script>
     <!--Load the API from the specified URL
