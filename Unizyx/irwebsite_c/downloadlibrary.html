@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unizyx_downloadlibrary</title>
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="SHORTCUT ICON" href="images/icon.ico">
+    <style>
+    .nav-tabs .nav-item {
+            margin-bottom: -1px;
+            width: 16.6%;
+        }
+        
+        .zone_r {
+            padding: 0.9rem;
+        }
+        /*
+        .nav-link {
+            display: block;
+            padding: 0.8rem 1rem;
+        }
+        */
+        
+        .active a {
+            color: #535353 !important;
+            font-weight: 500
+        }
+        
+        @media (max-width: 767px) {
+            .tab_none {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 1199px) {
+            .zone_r {
+                padding: 0.12rem;
+            }
+        }
+        
+        .border_b {
+            border-bottom: 2px solid #eee;
+            padding: 1.5rem;
+            display: block;
+        }
+        /*table_style*/
+        
+        position: relative;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .m-table {
+        margin-bottom: 10px;
+        vertical-align: middle;
+        width: 100%;
+        max-width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        background: transparent
+    }
+    .txt-right {
+        text-align: right;
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+    .txt-left {
+        padding-top: 20px;
+    }
+    .m-table th[class^="b-col-"],
+    .m-table th[class*=" b-col-"],
+    .m-table td[class^="b-col-"],
+    .m-table td[class*=" b-col-"] {
+        padding: 7px;
+    }
+    .m-table [class^="b-col-"],
+    .m-table [class*=" b-col-"] {
+        padding: 0;
+        float: none;
+        display: table-cell;
+        vertical-align: middle
+    }
+    .m-table th,
+    .m-table td,
+    .m-c-table th,
+    .m-c-table td {
+        padding: 12px 7px;
+        vertical-align: middle;
+        line-height: 1.6;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .b-col-5 {
+        padding-right: 5px;
+        padding-left: 5px;
+        width: 41.66667% !important;
+        min-height: 1px;
+        float: left;
+        display: block;
+        position: relative;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .m-table tbody tr {
+        -webkit-transition: background 0.3s;
+        -moz-transition: background 0.3s;
+        -ms-transition: background 0.3s;
+        -o-transition: background 0.3s;
+        transition: background 0.3s;
+        -webkit-transition-delay: 0;
+        -moz-transition-delay: 0;
+        -ms-transition-delay: 0;
+        -o-transition-delay: 0;
+        transition-delay: 0;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease
+    }
+    em {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    main {
+        display: block;
+    }
+    @media screen and (max-width: 999px) {
+        [class^="b-col-"],
+        [class*=" b-col-"] {
+            padding-right: 0;
+            padding-left: 0;
+            width: auto !important;
+            float: none
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .m-form-group .m-form-ctrl .m-button-group {
+            display: block
+        }
+        
+        .m-table [class^="b-col-"],
+        .m-table [class*=" b-col-"] {
+            display: table;
+            vertical-align: middle
+        }
+        
+        .m-table thead {
+            display: none
+        }
+        
+        .m-table thead .lightth {
+            display: none;
+            background: #F4FAFC;
+        }
+        
+        .m-table thead .lightborder {
+            border-right: none;
+            border-left: none;
+        }
+        
+        .m-table tr {
+            margin-top: 10px;
+            display: block;
+            vertical-align: middle;
+            overflow: hidden;
+            *zoom: 1;
+            border-top: 1px solid #dee2e6;
+            border-left: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .m-c-table tr {
+            margin-top: 20px;
+            display: block;
+            vertical-align: middle;
+            overflow: hidden;
+            *zoom: 1
+        }
+        
+        .m-table tr:first-child {
+            margin-top: 0;
+            border-top: 1px solid #dee2e6;
+            border-left: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .m-table tbody tr.is-bgcolor {
+            background: none;
+            border-top: 1px solid #dee2e6;
+            border-left: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .m-table tbody tr.is-bgcolor:hover {
+            background: none
+        }
+        
+        .m-table tbody tr:hover {
+            background: none
+        }
+        
+        .m-table tbody th,
+        .m-table tbody td {
+            padding: 5px 0;
+            width: 100%;
+            line-height: 1.6;
+            min-height: 40px;
+            display: table;
+            vertical-align: middle;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .m-table tbody th:first-child,
+        .m-table tbody td:first-child {
+            border-top: 0
+        }
+        
+        .m-table tbody th:nth-child(odd),
+        .m-table tbody td:nth-child(odd) {
+            background: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .m-c-table tbody td:nth-child(odd) {
+            background: none
+        }
+        
+        .m-table tbody th:nth-child(odd):before,
+        .m-table tbody td:nth-child(odd):before {
+            background: #157FDC;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .m-c-table tbody td:nth-child(odd):before {
+            background: none;
+        }
+        
+        .m-table tbody th:before,
+        .m-table tbody td:before {
+            content: attr(data-label);
+            padding-right: 5px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+            width: 33.3333%;
+            background: #157FDC;
+            display: table-cell;
+            vertical-align: middle;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .m-c-table tbody td:before {
+            content: attr(data-label);
+            padding-right: 5px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #535353;
+            width: 33.3333%;
+            background: none;
+            display: table-cell;
+            vertical-align: middle;
+            border-right: 1px solid #e9e9e9;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .m-table tbody th>*:not(before),
+        .m-table tbody td>*:not(before) {
+            padding-left: 5px;
+            word-wrap: break-word;
+            word-break: break-all;
+            display: table-cell;
+            vertical-align: middle
+        }
+    }
+    .m-table tbody th:before,
+    .m-table tbody td:before {
+        font-weight: bold;
+    }
+    .m-table tr {
+        border-top: 1px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+    }
+    .m-table tr:first-child {
+        border-top: 1px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+    }
+    .m-table tbody tr.is-bgcolor {
+        border-top: 1px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+    }
+    .m-table tbody th,
+    .m-table tbody td {
+        border-bottom: 1px solid #dee2e6;
+    }
+    .m-table tbody th:nth-child(odd),
+    .m-table tbody td:nth-child(odd) {
+        border-bottom: 1px solid #dee2e6;
+    }
+    .m-table th,
+    .m-table tbody td {
+        border-left: 1px solid #dee2e6;
+    }
+    a.btn-border {
+        border: 3px solid #f2f2f2;
+        margin-bottom: 2rem;
+        transition: color 0.32s ease-in-out;
+    }
+    a.btn-border:hover,
+    a.btn-border:focus,
+    a.btn-border.active {
+        border: 3px solid #007BFF;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="nav bg-light">
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#"><img src="images/logo.svg" height="30" class="d-inline-block align-top" alt=""></a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">關於合勤投控
+          <span class="sr-only">(current)</span>
+        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">全球佈局</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">產品與服務</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">企業責任</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">加入我們</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold dropdown-toggle" href="http://www.ir-cloud.com/mz//Unizyx/irwebsite_c/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">投資者專區</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">最新公告</a>
+                                <a class="dropdown-item" href="#">財務資訊</a>
+                                <a class="dropdown-item" href="#">公司基本資料</a>
+                                <a class="dropdown-item" href="#">股東服務專區</a>
+                                <a class="dropdown-item" href="#">公司治理</a>
+                                <a class="dropdown-item" href="#">IR工具</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">EN</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+        </div>
+    </section>
+    <section class="kv">
+        <!--
+        <div class="container d-flex justify-content-end">
+            <div class="stock_info mb-5 d-flex align-items-center  justify-content-center">
+                <div class="square text-center">
+                    <span>股票代號:3704</span>
+                    <p class="h2">$23.85</p>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="container">
+
+            <div class=" d-flex justify-content-end ">
+                <div class="stock_info d-flex align-items-center justify-content-center ">
+                    <div class="square text-center ">
+                        <span calss-="font-weight-bold d-block " style="font-size: 1.4rem; ">股票代號:3704</span>
+                        <p style="font-size: 4rem ">$23.85</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #e9ecef;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">首頁</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">投資者專區</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">IR工具</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">文件下載</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <section class="content mt-5">
+        <div class="container clearfix">
+            <p>
+                <h1 class="text-primary my-4">IR工具</h1>
+            </p>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-file-alt fa-4x text-primary"></i>
+                        <p class="my-3">證交所檔案</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="far fa-question-circle fa-4x text-primary"></i>
+                        <p class="my-3">問答集</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-address-book fa-4x text-primary"></i>
+                        <p class="my-3">聯絡窗口</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5 active">
+                        <i class="fas fa-download fa-4x text-primary"></i>
+                        <p class="my-3">文件下載</p>
+                    </a>
+                </div>
+            </div>
+            <p>
+                <h2 class="text-primary my-4">文件下載</h2>
+            </p>
+            <P>您可以在此快速篩選及下載相關文件。請點選標題開啟檔案或按右鍵「另存目標」將檔案儲存在您的電腦。
+            </P>
+            <P>
+
+                <form>
+                    <div class="form-row clearfix">
+                        <div class="col-md-3 ">
+                            <span>檢視 ：</span>
+                            <select id="inputState " class="form-control d-inline  my-2">
+                                 <option selected>[所有文件]</option>
+                                 <option>公司年報</option>
+                                 <option>活動訊息</option>
+                                 <option>財務資訊</option>
+                                 <option>每月營收</option>                                                           
+                            </select>
+                        </div>
+                        <div class="col-md-3 ">
+                            <span>選擇年度 ：</span>
+                            <select id="inputState " class="form-control d-inline my-2">
+                                 <option selected>[所有財務年度]</option>
+                                 <option>2019</option>
+                                 <option>2018</option>
+                                 <option>2017</option>
+                                 <option>2016</option>
+                                 <option>2015</option>     
+                                 <option>2014</option>     
+                                 <option>2013</option>     
+                                 <option>2012</option>     
+                                 <option>2011</option>     
+                                 <option>2010</option>                                                                
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </P>
+            <table class="m-table mb-5 " style="overflow: scroll; ">
+                <thead class="bg-primary text-white border ">
+                    <tr>
+                        <th class=" " style="width: 53%; ">標題</th>
+                        <th class=" ">內容類別</th>
+                        <th class=" ">年度</th>
+                        <th class=" ">檔案類型</th>
+                        <th class=" ">大小</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2018年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2018</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>4 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2017年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2017</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>5 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2016年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2016</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>7 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2015年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2015</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>6 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2014年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2014</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>9 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2013年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2013</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>7 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2012年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2012</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>4 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2011年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2011</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>9 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2010年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2010</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>8 MB</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="標題 "><em><a href="# " target="_blank ">2009年度公司年報</a></em></td>
+                        <td data-label="內容類別 "><span>公司年報</span></td>
+                        <td data-label="年度 "><span>2009</span></td>
+                        <td data-label="檔案類型 "><em><a href="# " target="_blank "><i class="far fa-file-pdf mr-2 "></i></a></em></td>
+                        <td data-label="大小 "><span>2 MB</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="text-white " style="background-color: #3A4050; ">
+        <div class="container ">
+            <div class="row py-5 px-2 d-flex justify-content-between ">
+                <div class="col-md-2 d-flex align-items-center ">
+                    <a><img src="images/logo_w.svg " height="40 " class="d-inline-block align-top my-3 " alt=" "></a>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="row ">
+                        <div class="col-md-6 d-flex justify-content-md-start ">
+                            <ul>
+                                <li>關於合勤投控</li>
+                                <li>全球佈局</li>
+                                <li>產品與服務</li>
+                                <li>企業責任</li>
+                                <li>加入我們</li>
+                                <li>投資者專區</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-md-center ">
+                            <ul>
+                                <li>盟創科技</li>
+                                <li>合勤科技</li>
+                                <li>合勤基金會</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-3 ">
+                    <i class="fab fa-facebook fa-3x d-inline-block social mr-3 "></i>
+                    <i class="fab fa-youtube fa-3x d-inline-block social "></i>
+                    <p class="mt-5 ">
+                        新竹科學園區創新二路6號 <br> info@unizyx.com.tw <br> +886-3-578-8838
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright my-2 ">
+        <div class="container ">
+
+            <div class="row d-flex justify-content-between ">
+                <div class="col-md-4 ">Copyright © Unizyx. All rights reserved.</div>
+                <div class="col-md-4 "> <a class="mx-2 text-Assistant1 " href="# ">網站地圖</a>|<a class="mx-2 text-Assistant1 " href="# ">法律聲明</a>|<a class="mx-2 text-Assistant1 " href="# ">隱私權條款</a></div>
+            </div>
+        </div>
+        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://kit.fontawesome.com/ba21f9cdd0.js "></script>
+        <script src="js/style.js "></script>
+        <script>
+            $(".btn-border").click(function() {
+                $(".btn-border").removeClass("active");
+                $(this).addClass("active");
+            });
+        </script>
+</body>
+
+</html>

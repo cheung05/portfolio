@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unizyx_quarterly</title>
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="SHORTCUT ICON" href="images/icon.ico">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        .nav-tabs .nav-item {
+            margin-bottom: -1px;
+            width: 16.6%;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .zone_r {
+            padding: 0.9rem;
+        }
+        /*
+        .nav-link {
+            display: block;
+            padding: 0.8rem 1rem;
+        }
+        */
+        
+        @media (max-width: 767px) {
+            .tab_none {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 414px) {
+            .nav-tabs .nav-link {
+                height: 3rem;
+            }
+        }
+        
+        @media screen and (max-width: 1199px) {
+            .zone_r {
+                padding: 0.12rem;
+            }
+        }
+        
+        .bs-example {
+            margin: 20px;
+        }
+        
+        .accordion .fa {
+            margin-right: 0.5rem;
+        }
+        
+        .accordion>.card .card-header {
+            margin-bottom: 0px;
+        }
+        
+        .card-header {
+            border: 1px solid #fff;
+            background-color: #fff;
+        }
+        
+        .btn-link:hover {
+            /*color: #0e5796;*/
+            text-decoration: none;
+        }
+        
+        .active a {
+            color: #157fdc !important;
+            font-weight: 500 !important;
+        }
+        
+        .active a:hover {
+            color: #0e5796 !important;
+        }
+        
+        .m-table {
+            margin-bottom: 10px;
+            vertical-align: middle;
+            width: 100%;
+            max-width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            background: transparent;
+            border: 1px solid #f2f2f2;
+        }
+        
+        .m-table th,
+        .m-table td,
+        .m-c-table th,
+        .m-c-table td {
+            padding: 12px 4px;
+            vertical-align: middle;
+            line-height: 1.6;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #f2f2f2;
+            width: 16%;
+        }
+        
+        a.btn-border {
+            border: 3px solid #f2f2f2;
+            margin-bottom: 2rem;
+            transition: color 0.32s ease-in-out;
+        }
+        
+        a.btn-border:hover,
+        a.btn-border:focus,
+        a.btn-border.active {
+            border: 3px solid #007BFF;
+        }
+        
+        i {
+            font-style: normal;
+        }
+    </style>
+    <!--
+    <script>
+        $(document).ready(function() {
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.show").each(function() {
+                $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+            });
+
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function() {
+                $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+            }).on('hide.bs.collapse', function() {
+                $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+            });
+        });
+    </script>
+    -->
+</head>
+
+<body>
+    <section class="nav bg-light">
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#"><img src="images/logo.svg" height="30" class="d-inline-block align-top" alt=""></a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">關於合勤投控
+          <span class="sr-only">(current)</span>
+        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">全球佈局</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">產品與服務</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">企業責任</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">加入我們</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold dropdown-toggle" href="http://www.ir-cloud.com/mz//Unizyx/irwebsite_c/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">投資者專區</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">最新公告</a>
+                                <a class="dropdown-item" href="#">財務資訊</a>
+                                <a class="dropdown-item" href="#">公司基本資料</a>
+                                <a class="dropdown-item" href="#">股東服務專區</a>
+                                <a class="dropdown-item" href="#">公司治理</a>
+                                <a class="dropdown-item" href="#">IR工具</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">EN</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+        </div>
+    </section>
+    <section class="kv">
+        <!--
+        <div class="container d-flex justify-content-end">
+            <div class="stock_info mb-5 d-flex align-items-center  justify-content-center">
+                <div class="square text-center">
+                    <span>股票代號:3704</span>
+                    <p class="h2">$23.85</p>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="container">
+
+            <div class=" d-flex justify-content-end ">
+                <div class="stock_info d-flex align-items-center justify-content-center ">
+                    <div class="square text-center ">
+                        <span calss-="font-weight-bold d-block " style="font-size: 1.4rem; ">股票代號:3704</span>
+                        <p style="font-size: 4rem ">$23.85</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #e9ecef;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">首頁</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">投資者專區</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">財務資訊 </a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">每季財務報告</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <section class="content mt-5">
+        <div class="container">
+
+            <p>
+                <h1 class="text-primary my-4">財務資訊 </h1>
+            </p>
+            <div class="row text-center mb-3">
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5 active">
+                        <i class="fas fas fa-coins fa-4x text-primary"></i>
+                        <p class="my-3">每季財務報告</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
+                        <p class="my-3">每月合併營收</p>
+                    </a>
+                </div>
+            </div>
+            <p>
+                <h2 class="text-primary my-4">每季財務報告</h2>
+            </p>
+            <ul class="nav nav-tabs text-center tab_none" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active font-weight-bold h5" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">2019</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold h5" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">2018</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold h5" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">2017</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold h5" id="foru-tab" data-toggle="tab" href="#four" role="tab" aria-controls="four" aria-selected="false">2016</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold h5" id="five-tab" data-toggle="tab" href="#five" role="tab" aria-controls="five" aria-selected="false">2015</a>
+                </li>
+                <li class="nav-item" style="border-bottom: 3px solid #dee2e6;margin-bottom: 7px;">
+                    <a class="btn btn-Assistant" href="#">歷史資訊</a>
+                </li>
+            </ul>
+
+            <div class="form-group d-block d-sm-block d-md-none clearfix">
+                <!--<select class="form-control" id="exampleFormControlSelect1" onchange="window.open(this.options[this.selectedIndex].value)">-->
+                <select class="form-control d-inline" style="width: 50%;">
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                </select>
+                <a class="btn btn-Assistant d-inline float-right" href="#">歷史資訊</a>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one-tab">
+                    <div class="my-5">
+
+                        <div>
+                            <div class="card rounded-0 border-0">
+                                <div class="card-header" id="headingOne">
+                                    <h3 class="mb-0 text-primary">
+                                        合勤投資控股
+                                    </h3>
+                                </div>
+                                <div id="collapseOne">
+                                    <div class="card-body">
+                                        <table class="m-table text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th class="txt-center lightborder" colspan="4"><span>合併財報</span></th>
+                                                    <th class="txt-center lightborder" rowspan="2">個體財報</th>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="合併財報 Q1" class="txt-right" style="background-color: #6FC4EE;"><span>Q1</span></td>
+                                                    <td data-label="合併財報 Q2" class="txt-right" style="background-color: #6FC4EE;">Q2</td>
+                                                    <td data-label="合併財報 Q3" class="txt-right" style="background-color: #6FC4EE;">Q3</td>
+                                                    <td data-label="合併財報 Q4" class="txt-right" style="background-color: #6FC4EE;">Q4</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="合併財報 Q1" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                    <td data-label="合併財報 Q2" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                    <td data-label="合併財報 Q3" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                    <td data-label="合併財報 Q4" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                    <td data-label="個體財報" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--
+                                        <table class="table" style="border: 1px solid #dee2e6;">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="bg-primary text-white" style="width:30%;">2019-08-08</th>
+                                                    <td><a href="#">2019 Q2 合勤投資控股財務報告書</a></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th class="bg-primary text-white">2019-05-02</th>
+                                                    <td>
+                                                        <a href="#">2019 Q1 合勤投資控股財務報告書</a>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card rounded-0 border-0">
+                                <div class="card-header" id="headingTwo">
+                                    <h3 class="mb-0 text-primary">
+                                        盟創科技
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo">
+                                    <div class="card-body">
+                                        <table class="m-table text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th class="txt-center lightborder" colspan="4"><span>合併財報</span></th>
+                                                    <th class="txt-center lightborder" rowspan="2">個體財報</th>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="合併財報 Q1" class="txt-right" style="background-color: #6FC4EE;"><span>Q1</span></td>
+                                                    <td data-label="合併財報 Q2" class="txt-right" style="background-color: #6FC4EE;">Q2</td>
+                                                    <td data-label="合併財報 Q3" class="txt-right" style="background-color: #6FC4EE;">Q3</td>
+                                                    <td data-label="合併財報 Q4" class="txt-right" style="background-color: #6FC4EE;">Q4</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="合併財報 Q1" class="txt-right"><span class="text-primary">N/A</span></td>
+                                                    <td data-label="合併財報 Q2" class="txt-right"><a href="# " target="_blank "><i class="text-primary">PDF</i></a></td>
+                                                    <td data-label="合併財報 Q3" class="txt-right"><span class="text-primary">N/A</span></td>
+                                                    <td data-label="合併財報 Q4" class="txt-right"><a href="# " target="_blank "><i class="text-primary">PDF</i></a></td>
+                                                    <td data-label="個體財報" class="txt-right"><a href="# " target="_blank "><i class="text-primary">PDF</i></a></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!--
+                                        <table class="table" style="border: 1px solid #dee2e6;">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="bg-primary text-white">2019-08-08</th>
+                                                    <td><a href="#">2019 Q2 盟創科技財務報告書</a></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th class="bg-primary text-white">2019-05-02</th>
+                                                    <td>
+                                                        <a href="#">2019 Q1 盟創科技財務報告書</a>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-0 border-0">
+                            <div class="card-header" id="headingThree">
+                                <h3 class="mb-0 text-primary">
+                                    合勤科技
+                                </h3>
+                            </div>
+                            <div id="collapseThree">
+                                <div class="card-body">
+                                    <table class="m-table text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="txt-center lightborder" colspan="4"><span>合併財報</span></th>
+                                                <th class="txt-center lightborder" rowspan="2">個體財報</th>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="合併財報 Q1" class="txt-right" style="background-color: #6FC4EE;"><span>Q1</span></td>
+                                                <td data-label="合併財報 Q2" class="txt-right" style="background-color: #6FC4EE;">Q2</td>
+                                                <td data-label="合併財報 Q3" class="txt-right" style="background-color: #6FC4EE;">Q3</td>
+                                                <td data-label="合併財報 Q4" class="txt-right" style="background-color: #6FC4EE;">Q4</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="合併財報 Q1" class="txt-right"><span class="text-primary">N/A</span></td>
+                                                <td data-label="合併財報 Q2" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                <td data-label="合併財報 Q3" class="txt-right"><span class="text-primary">N/A</span></td>
+                                                <td data-label="合併財報 Q4" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+                                                <td data-label="個體財報" class="txt-right"><a href="# " target="_blank "><i class="text-primary ">PDF</i></a></td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--
+                                    <table class="table" style="border: 1px solid #dee2e6;">
+                                        <tbody>
+                                            <tr>
+                                                <th class="bg-primary text-white" style="width:30%;">2019-08-08</th>
+                                                <td><a href="#">2019 Q2 合勤科技財務報告書</a></td>
+
+                                            </tr>
+                                            <tr>
+                                                <th class="bg-primary text-white">2019-05-02</th>
+                                                <td>
+                                                    <a href="#">2019 Q1 合勤科技財務報告書</a>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">2018</div>
+                <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">2017</div>
+                <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">2016</div>
+                <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">2015</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white" style="background-color: #3A4050; ">
+        <div class="container ">
+            <div class="row py-5  px-2 d-flex justify-content-between ">
+                <div class="col-md-2 d-flex align-items-center ">
+                    <a><img src="images/logo_w.svg " height="40" class="d-inline-block align-top my-3" alt=" "></a>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-md-start">
+                            <ul>
+                                <li>關於合勤投控</li>
+                                <li>全球佈局</li>
+                                <li>產品與服務</li>
+                                <li>企業責任</li>
+                                <li>加入我們</li>
+                                <li>投資者專區</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-md-center">
+                            <ul>
+                                <li>盟創科技</li>
+                                <li>合勤科技</li>
+                                <li>合勤基金會</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-3 ">
+                    <i class="fab fa-facebook fa-3x d-inline-block social mr-3 "></i>
+                    <i class="fab fa-youtube fa-3x d-inline-block social "></i>
+                    <p class="mt-5 ">
+                        新竹科學園區創新二路6號 <br> info@unizyx.com.tw <br> +886-3-578-8838
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright my-2">
+        <div class="container ">
+
+            <div class="row d-flex justify-content-between ">
+                <div class="col-md-4 ">Copyright © Unizyx. All rights reserved.</div>
+                <div class="col-md-4"> <a class="mx-2 text-Assistant1" href="# ">網站地圖</a>|<a class="mx-2 text-Assistant1" href="# ">法律聲明</a>|<a class="mx-2 text-Assistant1" href="# ">隱私權條款</a></div>
+            </div>
+        </div>
+
+        <script>
+            $(function() {
+
+                function toggleIcon(e) {
+                    $(e.target)
+                        .prev('.panel-heading')
+                        .find(".plus-minus")
+                        .toggleClass('glyphicon-plus glyphicon-minus');
+                }
+                $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+                $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+            });
+        </script>
+
+
+        <!--<script src="js/jquery-3_2_1-min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://kit.fontawesome.com/ba21f9cdd0.js "></script>
+        <script src="js/style.js "></script>
+        <script>
+            $(".btn-border").click(function() {
+                $(".btn-border").removeClass("active");
+                $(this).addClass("active");
+            });
+        </script>
+</body>
+
+</html>

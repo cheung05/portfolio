@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unizyx_board</title>
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="SHORTCUT ICON" href="images/icon.ico">
+    <style>
+        .nav-tabs .nav-item {
+            margin-bottom: -1px;
+            width: 16.6%;
+        }
+        
+        .zone_r {
+            padding: 0.9rem;
+        }
+        /*
+        .nav-link {
+            display: block;
+            padding: 0.8rem 1rem;
+        }
+        */
+        
+        .active a {
+            color: #535353 !important;
+            font-weight: 500
+        }
+        
+        @media (max-width: 767px) {
+            .tab_none {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 1199px) {
+            .zone_r {
+                padding: 0.12rem;
+            }
+        }
+        
+        .border_b {
+            border-bottom: 2px solid #eee;
+            padding: 1.5rem;
+            display: block;
+        }
+        
+        a.btn-border {
+            border: 3px solid #f2f2f2;
+            margin-bottom: 2rem;
+            transition: color 0.32s ease-in-out;
+        }
+        
+        a.btn-border:hover,
+        a.btn-border:focus,
+        a.btn-border.active {
+            border: 3px solid #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="nav bg-light">
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#"><img src="images/logo.svg" height="30" class="d-inline-block align-top" alt=""></a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">關於合勤投控
+          <span class="sr-only">(current)</span>
+        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">全球佈局</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">產品與服務</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">企業責任</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">加入我們</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold dropdown-toggle" href="http://www.ir-cloud.com/mz//Unizyx/irwebsite_c/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">投資者專區</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">最新公告</a>
+                                <a class="dropdown-item" href="#">財務資訊</a>
+                                <a class="dropdown-item" href="#">公司基本資料</a>
+                                <a class="dropdown-item" href="#">股東服務專區</a>
+                                <a class="dropdown-item" href="#">公司治理</a>
+                                <a class="dropdown-item" href="#">IR工具</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-xl-3 mx-lg-2 text-Assistant1 font-weight-bold" href="#">EN</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+        </div>
+    </section>
+    <section class="kv">
+        <!--
+        <div class="container d-flex justify-content-end">
+            <div class="stock_info mb-5 d-flex align-items-center  justify-content-center">
+                <div class="square text-center">
+                    <span>股票代號:3704</span>
+                    <p class="h2">$23.85</p>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="container">
+
+            <div class=" d-flex justify-content-end ">
+                <div class="stock_info d-flex align-items-center justify-content-center ">
+                    <div class="square text-center ">
+                        <span calss-="font-weight-bold d-block " style="font-size: 1.4rem; ">股票代號:3704</span>
+                        <p style="font-size: 4rem ">$23.85</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #e9ecef;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">首頁</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">投資者專區</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">股東服務專區</a></li>
+                    <li class="breadcrumb-item"><a class="text-Assistant1" href="#">致股東報告書</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <section class="content mt-5">
+        <div class="container clearfix">
+            <p>
+                <h1 class="text-primary my-4">股東服務專區</h1>
+            </p>
+            <div class="row text-center mb-3">
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5 active">
+                        <i class="fas fa-file-contract fa-4x text-primary"></i>
+                        <p class="my-3">致股東報告書</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-chart-pie fa-4x text-primary"></i>
+                        <p class="my-3">股權結構</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-chart-line fa-4x text-primary"></i>
+                        <p class="my-3">股價資訊</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="btn-border d-block py-5">
+                        <i class="fas fa-info-circle fa-4x text-primary"></i>
+                        <p class="my-3">股東會資訊
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <p>
+                <h2 class="text-primary my-4">致股東報告書</h2>
+            </p>
+            <div class="card p-5 bg-Assistant my-5 rounded-0 border-0">
+                <p>合勤 投資控股股份有限公司(以下簡稱合勤控)致力維持高水平的商業道德標準、有效的權責機制、以及在業務各環節保持高水準的公司治理，憑著盡責 及誠實的態度經營業務，以符合公司及股東的長遠利益。
+                </p>
+                <p>合勤控深信良好的公司治理，能為業務發展建立穩健的基礎，為市場提供高品質的產品及服務，同時為股東帶來最佳回報。
+                </p>
+                <p>合勤控的內部稽核室及監察人能確保完善的匯報及內部監控機制。此外亦成立了人評委員會。高效率的董事會，以及第一時間向股東發放相關公司資訊， 均可彰顯公司保障股東利益方面的成績。
+                </p>
+                <p>合勤控透過適時向股東及投資者發放企業資訊，保持高透明度。公司透過以下途徑，實踐第一時間發佈公司訊息的承諾：
+                </p>
+                <ul class="text-primary">
+                    <li>年報及財務報告</li>
+                    <li>新聞發佈</li>
+                    <li>這些資料亦可從公司網站下載。</li>
+                </ul>
+                <p>此外，合勤控定期舉行法人說明會，由管理階層解答提問。</p>
+            </div>
+            <!--
+            <p>
+                <h2 class="text-primary my-4">相關資料</h2>
+            </p>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6"><span class="border_b"><a href="#">董事成員多元化政策落石情形(PDF)</a></span></div>
+                    <div class="col-md-6"><span class="border_b"><a href="#">獨立董事選任資訊(PDF)</a></span></div>
+                    <div class="col-md-6"><span class="border_b"><a href="#">運作情形(PDF)</a></span></div>
+                    <div class="col-md-6"><span class="border_b"><a href="#">董事會決議事項(PDF)</a></span></div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+    <footer class="text-white" style="background-color: #3A4050; ">
+        <div class="container ">
+            <div class="row py-5  px-2 d-flex justify-content-between ">
+                <div class="col-md-2 d-flex align-items-center ">
+                    <a><img src="images/logo_w.svg " height="40" class="d-inline-block align-top my-3" alt=" "></a>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-md-start">
+                            <ul>
+                                <li>關於合勤投控</li>
+                                <li>全球佈局</li>
+                                <li>產品與服務</li>
+                                <li>企業責任</li>
+                                <li>加入我們</li>
+                                <li>投資者專區</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-md-center">
+                            <ul>
+                                <li>盟創科技</li>
+                                <li>合勤科技</li>
+                                <li>合勤基金會</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <span class="line_v "></span>
+                </div>
+                <div class="col-md-3 ">
+                    <i class="fab fa-facebook fa-3x d-inline-block social mr-3 "></i>
+                    <i class="fab fa-youtube fa-3x d-inline-block social "></i>
+                    <p class="mt-5 ">
+                        新竹科學園區創新二路6號 <br> info@unizyx.com.tw <br> +886-3-578-8838
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright my-2">
+        <div class="container ">
+
+            <div class="row d-flex justify-content-between ">
+                <div class="col-md-4 ">Copyright © Unizyx. All rights reserved.</div>
+                <div class="col-md-4"> <a class="mx-2 text-Assistant1" href="# ">網站地圖</a>|<a class="mx-2 text-Assistant1" href="# ">法律聲明</a>|<a class="mx-2 text-Assistant1" href="# ">隱私權條款</a></div>
+            </div>
+        </div>
+        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://kit.fontawesome.com/ba21f9cdd0.js "></script>
+        <script src="js/style.js "></script>
+        <script>
+            $(".btn-border").click(function() {
+                $(".btn-border").removeClass("active");
+                $(this).addClass("active");
+            });
+        </script>
+</body>
+
+</html>
